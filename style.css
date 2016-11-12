@@ -1,0 +1,15 @@
+/*CSS custom */
+
+.form-horizontal{
+  width: 20%;
+  border: 1px solid grey;
+  padding: 20px;
+}
+
+.btn{
+  margin: 5px;
+}
+
+a{
+  margin: 5px;
+}
