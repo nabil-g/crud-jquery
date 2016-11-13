@@ -1,18 +1,20 @@
 // JS
 
 function republier(cible) {
-  var msg = $(cible).prev().val();
-  $(cible).parent().text(msg);
+  var msg = $(cible).prev().val(function() {
+    $(cible).parent().text(msg);
+  });
+
 }
 
 function modifier(cible) {
 
   var msg = $(cible).parent().prev();
-  var valmsg = $(cible).parent().prev().val();
-
-  msg.html('<input type="text"><button class="btn btn-primary btn-sm" onclick"republier(this)">Re-publier</button>', function() {
-      $(cible).parent().prev().find('input').val(valmsg);
+  var valmsg = $(cible).parent().prev().val(function(){
+    msg.html('<input type="text" value="' + valmsg + '"><button class="btn btn-primary btn-sm" onclick"republier(this)">Re-publier</button>');
   });
+
+
 
 
 
