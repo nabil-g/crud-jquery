@@ -1,9 +1,15 @@
 /*CSS custom */
 
+body{
+  display: flex;
+  flex-direction: row;
+}
+
 .form-horizontal{
   width: 20%;
   border: 1px solid grey;
   padding: 20px;
+  margin: 30px;
 }
 
 .btn{
@@ -12,4 +18,9 @@
 
 a{
   margin: 5px;
+}
+
+.table{
+  /*width: 40%;*/
+  margin: 30px;
 }
