@@ -1,8 +1,8 @@
 /*CSS custom */
 
-body{
+main{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .form-horizontal{

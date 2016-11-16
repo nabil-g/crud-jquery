@@ -41,6 +41,16 @@ if(isset($_POST['numero']) AND !empty($_POST['numero'])) {
 
 // MISE A JOUR DE LA BASE DE DONNÉES
 
+if(isset($_POST['num']) AND isset($_POST['modif']) AND !empty($_POST['num']) AND !empty($_POST['modif'])) {
+	//SUPPRESSION DES DONNEES DANS LA BASE DE DONNEES
+
+	//On prépare la requete d'insertion avant de lui insérer les variables de l'utilisateur (afin d'eviter des injections SQL).
+	$req = $bdd->prepare('UPDATE msgsCrud SET message = ? WHERE ID = ?');
+
+	//On exécute la requete avec les variables "nettoyées" des éventuelles injections SQL.
+	$req->execute(array($_POST['modif'], $_POST['num']));
+
+}
 
 
 
